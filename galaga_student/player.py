@@ -12,9 +12,6 @@ class Player(pg.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
         # TODO
-        self.x = x
-        self.y = y
-        self.coord = (x, y)
         self.image = pg.image.load(os.path.join('assets', 'Ship6.png')).convert_alpha()
         self.rect = self.image.get_rect()
 
@@ -25,8 +22,9 @@ class Player(pg.sprite.Sprite):
         pass
 
     def up(self, delta):
-
+        self.rect = pg.Rect.move_ip(self.rect,0,delta)
         pass
 
     def down(self, delta):
+        self.rect =  pg.Rect.move_ip(self.rect,0,delta)
         pass
