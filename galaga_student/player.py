@@ -12,6 +12,11 @@ class Player(pg.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
         # TODO
+        self.x = x
+        self.y = y
+        self.coord = (x, y)
+        self.image = pg.image.load(os.path.join('assets', 'Ship6.png')).convert_alpha()
+        self.rect = self.image.get_rect()
 
     def draw(self, screen):
         screen.blit(self.image, self.rect)
@@ -20,6 +25,7 @@ class Player(pg.sprite.Sprite):
         pass
 
     def up(self, delta):
+
         pass
 
     def down(self, delta):

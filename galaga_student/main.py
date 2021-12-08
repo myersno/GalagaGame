@@ -16,7 +16,7 @@ def main():
     screen = pg.display.set_mode([1024, 768])
     
     # Create a player - TODO
-
+    p = Player.init()
     # Create enemy and projectile Groups - TODO
 
     for i in range(500, 1000, 75):
