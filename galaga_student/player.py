@@ -12,8 +12,12 @@ class Player(pg.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
         # TODO
+        self.alive = True
+        self.health = 1
+        self.reloading = False
         self.image = pg.image.load(os.path.join('assets', 'Ship6.png')).convert_alpha()
         self.rect = self.image.get_rect()
+        self.rect.center = (30, 0)
 
     def draw(self, screen):
         screen.blit(self.image, self.rect)

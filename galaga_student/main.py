@@ -16,7 +16,7 @@ def main():
     screen = pg.display.set_mode([1024, 768])
     
     # Create a player - TODO
-    p = Player.__init__
+    player = Player.__init__
     # Create enemy and projectile Groups - TODO
 
     for i in range(500, 1000, 75):
@@ -26,7 +26,7 @@ def main():
 
     # Start sound - Load background music and start it
     # playing on a loop - TODO
-    pygame.mixer.music.load('backgroundmusic.mp3')
+    pygame.mixer.music.load('backgroundmusic.mp3') #idk what sound we supposed to use
     pygame.mixer.music.play(-1)
 
 
@@ -36,7 +36,7 @@ def main():
     font_size = 64
     font = pg.freetype.Font(font_path, font_size)
     # Make a tuple for FONTCOLOR - TODO
-    fontColor = (50, 205, 50)
+    FONTCOLOR = (50, 205, 50)
     # Startup the main game loop
     running = True
     # Keep track of time
